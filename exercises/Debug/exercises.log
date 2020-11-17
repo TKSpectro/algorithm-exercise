@@ -1,6 +1,0 @@
-﻿  archimedesPi.cpp
-  karatsuba.cpp
-C:\Users\tomka\Documents\GitHub\algorithm-exercise\exercises\karatsuba.cpp(23,14): warning C4244: "Initialisierung": Konvertierung von "double" in "int", möglicher Datenverlust
-  main.cpp
-  Code wird generiert...
-  exercises.vcxproj -> C:\Users\tomka\Documents\GitHub\algorithm-exercise\Debug\exercises.exe
