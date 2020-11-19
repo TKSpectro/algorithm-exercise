@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="archimedesPi.cpp" />
+    <ClCompile Include="integral.cpp" />
     <ClCompile Include="karatsuba.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="nthRoot.cpp" />
@@ -147,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="archimedesPi.h" />
+    <ClInclude Include="integral.h" />
     <ClInclude Include="karatsuba.h" />
     <ClInclude Include="nthRoot.h" />
     <ClInclude Include="primeNumbers.h" />

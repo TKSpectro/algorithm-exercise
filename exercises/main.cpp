@@ -4,6 +4,7 @@
 #include "primeNumbers.h"
 #include "archimedesPi.h"
 #include "karatsuba.h"
+#include "integral.h"
 using namespace std;
 
 void testNthRoot()
@@ -47,8 +48,27 @@ void testKaratsuba()
 	cout << "\n";
 }
 
+void testIntegral()
+{
+	double a = 0, b = 2;
+	int amountIntervalls = 4;
+	/*
+	cout << "a eingeben\n";
+	cin >> a;
+
+	cout << "b eingeben\n";
+	cin >> b;
+
+	cout << "amountIntervalls eingeben\n";
+	cin >> amountIntervalls;
+	cout << "\n";
+	*/
+	cout << "Rectangular: " << rectangularIntegral(a, b, amountIntervalls) << "\n";
+	cout << "Trapezoid: " << trapezoidalIntegral(a, b, amountIntervalls) << "\n";
+	cout << "simpsonIntegral: " << simpsonIntegral(a, b, amountIntervalls) << "\n";
+}
+
 int main()
 {
-	//testCalculatePiNew();
-	testKaratsuba();
+	testIntegral();
 }

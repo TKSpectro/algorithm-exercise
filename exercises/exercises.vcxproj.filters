@@ -28,6 +28,9 @@
     <ClCompile Include="karatsuba.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="integral.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="primeNumbers.h">
@@ -40,6 +43,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="karatsuba.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="integral.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
