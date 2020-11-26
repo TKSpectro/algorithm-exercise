@@ -142,6 +142,7 @@
     <ClCompile Include="archimedesPi.cpp" />
     <ClCompile Include="integral.cpp" />
     <ClCompile Include="karatsuba.cpp" />
+    <ClCompile Include="linearRegression.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="nthRoot.cpp" />
     <ClCompile Include="primeNumbers.cpp" />
@@ -150,6 +151,7 @@
     <ClInclude Include="archimedesPi.h" />
     <ClInclude Include="integral.h" />
     <ClInclude Include="karatsuba.h" />
+    <ClInclude Include="linearRegression.h" />
     <ClInclude Include="nthRoot.h" />
     <ClInclude Include="primeNumbers.h" />
   </ItemGroup>

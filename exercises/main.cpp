@@ -5,6 +5,7 @@
 #include "archimedesPi.h"
 #include "karatsuba.h"
 #include "integral.h"
+#include "linearRegression.h"
 using namespace std;
 
 void testNthRoot()
@@ -68,7 +69,14 @@ void testIntegral()
 	cout << "simpsonIntegral: " << simpsonIntegral(a, b, amountIntervalls) << "\n";
 }
 
+void testLinearRegression()
+{
+	cout << "-------------Linear Regression-------------" << "\n";
+	cout << "| " << linearRegression() << " | ";
+	cout << "\n";
+}
+
 int main()
 {
-	testIntegral();
+	testLinearRegression();
 }

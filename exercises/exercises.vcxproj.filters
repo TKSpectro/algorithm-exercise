@@ -31,6 +31,9 @@
     <ClCompile Include="integral.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="linearRegression.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="primeNumbers.h">
@@ -46,6 +49,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="integral.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="linearRegression.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
