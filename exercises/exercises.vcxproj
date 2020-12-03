@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="archimedesPi.cpp" />
+    <ClCompile Include="differentialEquation.cpp" />
     <ClCompile Include="integral.cpp" />
     <ClCompile Include="karatsuba.cpp" />
     <ClCompile Include="linearRegression.cpp" />
@@ -149,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="archimedesPi.h" />
+    <ClInclude Include="differentialEquation.h" />
     <ClInclude Include="integral.h" />
     <ClInclude Include="karatsuba.h" />
     <ClInclude Include="linearRegression.h" />

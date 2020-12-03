@@ -6,6 +6,7 @@
 #include "karatsuba.h"
 #include "integral.h"
 #include "linearRegression.h"
+#include "differentialEquation.h"
 using namespace std;
 
 void testNthRoot()
@@ -76,7 +77,24 @@ void testLinearRegression()
 	cout << "\n";
 }
 
+void testDifferentialEquation()
+{
+	double startX = 0;
+	double startY = 1;
+	double searchedValue = 4;
+	double stepWidth = 1;
+
+	cout << "-------------EULER-CAUCHY-------------" << "\n";
+	eulerCauchy(startX, startY, searchedValue, stepWidth);
+	cout << "\n-------------IMPROVED-EULER-CAUCHY-------------" << "\n";
+	improvedEulerCauchy(startX, startY, searchedValue, stepWidth);
+	cout << "\n-------------RUNGEKUTTA 2-------------" << "\n";
+	rungeKutta2(startX, startY, searchedValue, stepWidth);
+	cout << "\n-------------RUNGEKUTTA 4-------------" << "\n";
+	rungeKutta4(startX, startY, searchedValue, stepWidth);
+}
+
 int main()
 {
-	testLinearRegression();
+	testDifferentialEquation();
 }

@@ -34,6 +34,9 @@
     <ClCompile Include="linearRegression.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="differentialEquation.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="primeNumbers.h">
@@ -52,6 +55,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="linearRegression.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="differentialEquation.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

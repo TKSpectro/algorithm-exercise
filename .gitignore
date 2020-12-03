@@ -40,3 +40,5 @@ Release/
 *.opensdf
 *.tlog
 *.log
+
+.vs
