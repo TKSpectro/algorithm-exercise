@@ -37,6 +37,9 @@
     <ClCompile Include="differentialEquation.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="lrElimination.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="primeNumbers.h">
@@ -58,6 +61,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="differentialEquation.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="lrElimination.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

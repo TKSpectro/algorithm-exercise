@@ -144,6 +144,7 @@
     <ClCompile Include="integral.cpp" />
     <ClCompile Include="karatsuba.cpp" />
     <ClCompile Include="linearRegression.cpp" />
+    <ClCompile Include="lrElimination.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="nthRoot.cpp" />
     <ClCompile Include="primeNumbers.cpp" />
@@ -154,6 +155,7 @@
     <ClInclude Include="integral.h" />
     <ClInclude Include="karatsuba.h" />
     <ClInclude Include="linearRegression.h" />
+    <ClInclude Include="lrElimination.h" />
     <ClInclude Include="nthRoot.h" />
     <ClInclude Include="primeNumbers.h" />
   </ItemGroup>
