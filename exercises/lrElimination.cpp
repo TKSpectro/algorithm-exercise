@@ -2,6 +2,30 @@
 #include <math.h>
 #include <iostream>
 
+void outputMatrix4x4(double matrix[4][4])
+{
+	int size = 4;
+	for(int i = 0; i < size; i++)
+	{
+		for(int j = 0; j < size; j++)
+		{
+			std::cout << matrix[i][j] << "\t";
+		}
+		std::cout << "\n";
+	}
+	std::cout << "---------------------------------------------\n\n";
+}
+
+void outputVector4(double vector[4])
+{
+	int size = 4;
+	for(int i = 0; i < size; i++)
+	{
+		std::cout << vector[i] << "\t";
+	}
+	std::cout << "\n---------------------------------------------\n\n";
+}
+
 void eliminate()
 {
 	int const size = 4;
@@ -52,54 +76,46 @@ void eliminate()
 				matrix[i][j] -= matrix[k - 1][j] * helper;
 			}
 		}
-
-		// output every round
-		/*
-		std::cout << "leftMatrix:" << k << "\n";
-		for(int i = 0; i < size; i++)
-		{
-			for(int j = 0; j < size; j++)
-			{
-				std::cout << leftMatrix[i][j] << "\t";
-			}
-			std::cout << "\n";
-		}
-		std::cout << "++++++++++++++++++++++++++++++++++++++++++++\n\n";
-
-		std::cout << "matrix:" << k << "\n";
-		for(int i = 0; i < size; i++)
-		{
-			for(int j = 0; j < size; j++)
-			{
-				std::cout << matrix[i][j] << "\t";
-			}
-			std::cout << "\n";
-		}
-		std::cout << "---------------------------------------------\n\n";
-
-		*/
 	}
+	// output every round
+	std::cout << "leftMatrix:" << k << "\n";
+	outputMatrix4x4(leftMatrix);
 
-	// calculate y
+	std::cout << "matrix:" << k << "\n";
+	outputMatrix4x4(matrix);
+
+	// calculate y and x
 	double y[size];
+	double x[size] = {0,0,0,0};
 	double sum = 0;
 
-	// round
-	for(int i = 0; i < size; i++)
+	y[0] = b[0];
+	// row
+	for(int i = 1; i < size; i++)
 	{
-		
-		for(int j = 0; j < i - 1; j++)
+		y[i] = b[i];
+		// coloumn
+		for(int j = 0; j < i; j++)
 		{
-			sum += leftMatrix[i][j] * y[j];
+			y[i] -= leftMatrix[i][j] * y[j];
 		}
-		y[i] = (1 / leftMatrix[i][i]) * (b[i] - sum);
 	}
 
-	std::cout << "y:" << "\n";
-	for(int i = 0; i < size; i++)
+	// row
+	for(int i = 3; i >= 0; i--)
 	{
-		std::cout << y[i] << "\t";
-		std::cout << "\n";
+		// coloumn
+		for(int j = 3; j > i; j--)
+		{
+			x[i] += matrix[i][j] * x[j];
+		}
+		x[i] = (y[i] - x[i]) / matrix[i][i];
 	}
-	std::cout << "---------------------------------------------\n\n";
+
+
+	std::cout << "x:" << "\n";
+	outputVector4(x);
+
+	std::cout << "y:" << "\n";
+	outputVector4(y);
 }
