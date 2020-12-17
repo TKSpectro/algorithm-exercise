@@ -1,4 +1,4 @@
-#include "lrElimination.h"
+#include "lgs.h"
 #include <math.h>
 #include <iostream>
 
@@ -16,9 +16,8 @@ void outputMatrix4x4(double matrix[4][4])
 	std::cout << "---------------------------------------------\n\n";
 }
 
-void outputVector4(double vector[4])
+void outputVector(double vector[], int size)
 {
-	int size = 4;
 	for(int i = 0; i < size; i++)
 	{
 		std::cout << vector[i] << "\t";
@@ -26,7 +25,7 @@ void outputVector4(double vector[4])
 	std::cout << "\n---------------------------------------------\n\n";
 }
 
-void eliminate()
+void lrEliminate()
 {
 	int const size = 4;
 	int k = 1;	//Eliminationsschritt
@@ -114,8 +113,99 @@ void eliminate()
 
 
 	std::cout << "x:" << "\n";
-	outputVector4(x);
+	outputVector(x,size);
 
 	std::cout << "y:" << "\n";
-	outputVector4(y);
+	outputVector(y,size);
+}
+
+
+void jacobi()
+{
+	int const size = 3;
+	double matrix[size][size] = {{  3, 1, 0},
+								  { 1, 3, 1},
+								  { 0, 1, 3}};
+
+	double helper;
+
+	double b[size] = {1,5,7};
+	double x[size] = {0,0,0};
+	double xNew[size] = {0,0,0};
+	double sum = 0;
+	bool isWhile = true;
+	double abbruch[size];
+	// calculate matrix
+	// round
+	do
+	{
+		// row
+		for(int i = 0; i < size; i++)
+		{
+			sum = 0;
+			// coloumn
+			for(int j = 0; j < size; j++)
+			{
+				if(j != i)
+					sum += matrix[i][j] * x[j];
+			}
+			xNew[i] = (1 / matrix[i][i]) * (b[i] - sum);
+
+
+			abbruch[i] = x[i] - xNew[i];
+		}
+		isWhile = sqrt(abbruch[0] * abbruch[0] + abbruch[1] * abbruch[1] + abbruch[2] * abbruch[2]) > 0.001;
+		
+		x[0] = xNew[0];
+		x[1] = xNew[1];
+		x[2] = xNew[2];
+
+	} while(isWhile);
+
+	std::cout << "x:" << "\n";
+	outputVector(x, size);
+}
+
+void gaussSeidel()
+{
+	int const size = 3;
+
+	double matrix[size][size] = {{  3, 1, 0},
+								  { 1, 3, 1},
+								  { 0, 1, 3}};
+	double b[size] = {1,5,7};
+
+	double x[size] = {0,0,0};
+	double xNew;
+	int test = 0;
+	double sum = 0;
+	double sumOldX = 0;
+	double sumNewX = 0;
+	bool isWhile = true;
+	double abbruch[size];
+	// calculate matrix
+	// round
+	do
+	{
+		// row
+		for(int i = 0; i < size; i++)
+		{
+			sum = 0;
+			// coloumn
+			for(int j = 0; j < size; j++)
+			{
+				if(j != i)
+					sum += matrix[i][j] * x[j];
+			}
+			xNew = (1 / matrix[i][i]) * (b[i] - sum);
+			
+			abbruch[i] = x[i] - xNew;
+
+			x[i] = xNew;
+		}
+		isWhile = sqrt(abbruch[0] * abbruch[0] + abbruch[1] * abbruch[1] + abbruch[2] * abbruch[2]) > 0.001;	
+	} while(isWhile);
+
+	std::cout << "x:" << "\n";
+	outputVector(x, size);
 }

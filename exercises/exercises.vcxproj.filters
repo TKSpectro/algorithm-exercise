@@ -37,7 +37,7 @@
     <ClCompile Include="differentialEquation.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="lrElimination.cpp">
+    <ClCompile Include="lgs.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -63,7 +63,7 @@
     <ClInclude Include="differentialEquation.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="lrElimination.h">
+    <ClInclude Include="lgs.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

@@ -7,7 +7,7 @@
 #include "integral.h"
 #include "linearRegression.h"
 #include "differentialEquation.h"
-#include "lrElimination.h"
+#include "lgs.h"
 using namespace std;
 
 void testNthRoot()
@@ -97,5 +97,7 @@ void testDifferentialEquation()
 
 int main()
 {
-	eliminate();
+	//lrEliminate();
+	//jacobi();
+	gaussSeidel();
 }
