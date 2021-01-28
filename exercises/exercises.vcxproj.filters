@@ -40,6 +40,12 @@
     <ClCompile Include="lgs.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="optima.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="graph.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="primeNumbers.h">
@@ -64,6 +70,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="lgs.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="optima.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="graph.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

@@ -141,17 +141,21 @@
   <ItemGroup>
     <ClCompile Include="archimedesPi.cpp" />
     <ClCompile Include="differentialEquation.cpp" />
+    <ClCompile Include="graph.cpp" />
     <ClCompile Include="integral.cpp" />
     <ClCompile Include="karatsuba.cpp" />
     <ClCompile Include="linearRegression.cpp" />
     <ClCompile Include="lgs.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="nthRoot.cpp" />
+    <ClCompile Include="optima.cpp" />
     <ClCompile Include="primeNumbers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="archimedesPi.h" />
     <ClInclude Include="differentialEquation.h" />
+    <ClInclude Include="graph.h" />
+    <ClInclude Include="optima.h" />
     <ClInclude Include="integral.h" />
     <ClInclude Include="karatsuba.h" />
     <ClInclude Include="linearRegression.h" />

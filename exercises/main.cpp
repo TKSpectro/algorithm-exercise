@@ -8,6 +8,9 @@
 #include "linearRegression.h"
 #include "differentialEquation.h"
 #include "lgs.h"
+#include "optima.h"
+#include "graph.h"
+
 using namespace std;
 
 void testNthRoot()
@@ -95,9 +98,17 @@ void testDifferentialEquation()
 	rungeKutta4(startX, startY, searchedValue, stepWidth);
 }
 
+void testOptimaGradient()
+{
+	gradientProcedure();
+}
+
+void testPrim()
+{
+	prim();
+}
+
 int main()
 {
-	//lrEliminate();
-	//jacobi();
-	gaussSeidel();
+	testPrim();
 }
