@@ -22,8 +22,7 @@ double rectangularIntegral(double a, double b, int amountIntervalls)
 	{
 		obersumme += f(a + ((i + 1) * deltaX)) * deltaX;
 	}
-	//std::cout << "untersumme: " << abs(untersumme) << " obersumme: " << abs(obersumme) << "\n";
-	// return mittlewert
+	// returns the average of unter and obersumme
 	return abs((untersumme + obersumme) / 2);
 }
 

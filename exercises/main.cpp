@@ -16,7 +16,7 @@ using namespace std;
 void testNthRoot()
 {
 	cout << "-------------NTH ROOT-------------" << "\n";
-	cout << "| " << calculateNthRootNew(16, 2) << " | ";
+	cout << "| " << nthRoot(16, 2) << " | ";
 	cout << "\n";
 }
 
